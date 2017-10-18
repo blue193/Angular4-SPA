@@ -1,0 +1,32 @@
+<div class="fill">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+      <div class="row">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-search"></i></span>
+          <input type="text" class="form-control" name="keyword" placeholder="Enter keywords.." [(ngModel)]="keyword" (ngModelChange)="onInputKeyword()">
+        </div>
+      </div>
+      <div class="row">
+        <div class="item" *ngFor="let country of countries" (click)="onClickCountry(country)">
+          <div class="flag-box">
+            <div class="iti-flag" [ngClass]="country.alpha2_code.toLowerCase()"></div>
+          </div>
+          <div class="description">
+            <p class="name">{{country.name}}</p>
+            <span>{{country.alpha2_code}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+      <div class="row">
+        <div>
+          <p>{{selectedCountry.name}}</p>
+          <p>{{selectedCountry.alpha2_code}}</p>
+          <p>{{selectedCountry.alpha3_code}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

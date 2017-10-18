@@ -62,6 +62,7 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
  */
 
 import 'hammerjs'; // material
+import 'rxjs/Rx';
 
 /**
  * Date, currency, decimal and percent pipes.

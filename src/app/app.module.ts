@@ -1,5 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+// in memory web api
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemCountryService } from './core/in_memory_db/db';
+
+import { MaterialModule } from './shared/material/material.module';
+import { SearchModule } from './search/search.module';
+import { LayoutModule } from './layout/layout.module';
 
 import { AppComponent } from './app.component';
 
@@ -8,9 +20,18 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemCountryService, {delay: 1000}),
+    FormsModule,
+    HttpModule,
+    MaterialModule,
+    LayoutModule,
+    SearchModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

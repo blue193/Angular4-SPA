@@ -23,6 +23,7 @@
     "@angular/platform-browser": "^4.4.5",
     "@angular/platform-browser-dynamic": "^4.4.5",
     "@angular/router": "^4.4.5",
+    "angular-in-memory-web-api": "^0.5.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.5.1",
     "font-awesome": "^4.7.0",

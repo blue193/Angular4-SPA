@@ -1,0 +1,29 @@
+.item {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 10px;
+
+  &:hover {
+    background-color: cornflowerblue;
+  }
+  .flag-box {
+    width: 30px;
+  }
+  .description {
+    display: flex;
+    flex-direction: column;
+    p {
+      font-weight: 500;
+      font-size: 13px;
+      margin: 0;
+    }
+    span {
+      font-size: 7px;
+      color: grey;
+    }
+  }
+
+}
