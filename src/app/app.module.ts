@@ -11,6 +11,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemCountryService } from './core/in_memory_db/db';
 
+// helper api
+import { HttpHelperService } from './core/helpers/http-helper.service';
+
 import { MaterialModule } from './shared/material/material.module';
 import { SearchModule } from './search/search.module';
 import { LayoutModule } from './layout/layout.module';
@@ -34,6 +37,7 @@ import { AppComponent } from './app.component';
     SearchModule
   ],
   providers: [
+    HttpHelperService
   ],
   bootstrap: [AppComponent]
 })
