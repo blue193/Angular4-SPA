@@ -3,6 +3,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { AgmCoreModule } from '@agm/core';
+import { environment } from '../environments/environment';
 
 // in memory web api
 import { HttpClientModule } from '@angular/common/http';
@@ -26,6 +28,7 @@ import { AppComponent } from './app.component';
     HttpClientInMemoryWebApiModule.forRoot(InMemCountryService, {delay: 1000}),
     FormsModule,
     HttpModule,
+    AgmCoreModule.forRoot({apiKey: environment.agmAPIKey}),
     MaterialModule,
     LayoutModule,
     SearchModule

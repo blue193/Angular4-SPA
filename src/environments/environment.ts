@@ -5,5 +5,6 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://services.groupkt.com/'
+  baseUrl: 'http://services.groupkt.com/',
+  agmAPIKey: 'AIzaSyBuUbcy1Eg-zJbqB88UGea-hSkY46saAAs',
 };

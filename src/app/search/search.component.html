@@ -22,6 +22,7 @@
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
       <div class="row">
         <div>
+          <agm-map *ngIf="mapRender" [latitude]="selectedCountry.lat" [longitude]="selectedCountry.lng" [zoom]="3"></agm-map>
           <p>{{selectedCountry.name}}</p>
           <p>{{selectedCountry.alpha2_code}}</p>
           <p>{{selectedCountry.alpha3_code}}</p>
